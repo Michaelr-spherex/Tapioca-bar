@@ -117,4 +117,6 @@ contract MarketLiquidatorReceiver is IMarketLiquidatorReceiver, Ownable {
         swappers[_tokenIn] = _swapper;
         emit SwapperAssigned(_tokenIn, _swapper);
     }
+
+    receive() external payable {}
 }
